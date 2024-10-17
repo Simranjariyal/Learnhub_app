@@ -47,13 +47,13 @@ class MainActivity : AppCompatActivity() {
             registerUser(email, password)
         }
 
-//        val currentUser = auth.currentUser
-//        if (currentUser != null) {
-//            // User is already logged in, redirect to HomeActivity
-//            val intent = Intent(this, HomeActivity::class.java)
-//            startActivity(intent)
-//            finish() // Close the LoginActivity
-//        }
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            // User is already logged in, redirect to HomeActivity
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish() // Close the LoginActivity
+        }
     }
 
     private fun registerUser(email: String, password: String) {
